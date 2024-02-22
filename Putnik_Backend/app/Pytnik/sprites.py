@@ -8,7 +8,6 @@ def izdvoji_zlatnike(map_content):
         elements = line.strip().split(',')
         brojevi = [int(element) for element in elements]
         zlatnici.append((brojevi[0],brojevi[1]))
-
     return zlatnici
 
 def izdvoji_putanje(map_content):
