@@ -2,7 +2,7 @@ import math, sys
 from sys import maxsize
 
 #informacije o zlatnicima, zlatnici su koordinate
-def izdvoji_zlatnike(map_content):
+def nadji_zlatnike(map_content):
     zlatnici = []
     lines = map_content.strip().split('\n')
     for line in lines:
@@ -12,7 +12,7 @@ def izdvoji_zlatnike(map_content):
     return zlatnici
 
 #matrica putanja izmedju razlicitih čvorova(zlatnika)
-def izdvoji_putanje(map_content):
+def nadji_putanje(map_content):
     lines = map_content.strip().split('\n')
     broj_zlatnika = len(lines)
     matrica_putanja = [[0 for _ in range(broj_zlatnika)] for _ in range(broj_zlatnika)]
@@ -477,7 +477,7 @@ def Micko(graph, tree, V):
         val = current_fringe_node.f_value - h
         #proveravamo da li je putanja od trenutnog cvora do pocetnog validna
         path = checkPath(tree, current_tree_node, V)
-        
+
         #proveravamo da li je trenutni cvor pocetni cvor,i da li je putanja validna, ako jeste, dostigli smo cilj
         if current_tree_node.c_no == 0 and path == 1:
             goalState = 1

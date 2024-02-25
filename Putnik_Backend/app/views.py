@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from app.Pytnik.sprites import izdvoji_putanje, broj_redova_u_stringu, izdvoji_zlatnike, Aki, Jocke, Uki, Micko, zbirPutanjaAki
+from app.Pytnik.sprites import nadji_putanje, broj_redova_u_stringu, nadji_zlatnike, Aki, Jocke, Uki, Micko, zbirPutanjaAki
 from app.Pytnik.sprites import opisPutanjaMat, zbirJocke, Tree
 
 
@@ -12,8 +12,8 @@ def handle_map_and_agent(request):
         map_content = data['mapContent']
         agent_index = data['agentIndex']
 
-        zlatnici = izdvoji_zlatnike(map_content)
-        matricaPutanja = izdvoji_putanje(map_content)
+        zlatnici = nadji_zlatnike(map_content)
+        matricaPutanja = nadji_putanje(map_content)
         brRedova = broj_redova_u_stringu(map_content)
         opisPutanja = []
         ukupanZbir = ""
