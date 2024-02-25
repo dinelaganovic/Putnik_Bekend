@@ -1,8 +1,8 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from app.Pytnik.agents import izdvoji_putanje, broj_redova_u_stringu, izdvoji_zlatnike, Aki, Jocke, Uki, Micko, zbirPutanjaAki
-from app.Pytnik.agents import opisPutanjaMat, zbirJocke, Tree
+from app.Pytnik.sprites import izdvoji_putanje, broj_redova_u_stringu, izdvoji_zlatnike, Aki, Jocke, Uki, Micko, zbirPutanjaAki
+from app.Pytnik.sprites import opisPutanjaMat, zbirJocke, Tree
 
 
 @csrf_exempt
